@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="http://www.agid.gov.it/ssu/ws/test/message/types"
+    targetNamespace="http://www.agid.gov.it/ssu/ws/test/message/types"
+    xmlns:msgtype="http://www.agid.gov.it/ssu/ws/message/types"
+    >
+    
+    
+    <xs:import namespace="http://www.agid.gov.it/ssu/ws/message/types" schemaLocation="../spec/types/MessageTypes.xsd" ></xs:import>
+    
+    
+    <xs:element name="TestFile" type="TestFileType"/>
+    
+    <xs:complexType name="TestFileType">
+        <xs:sequence>
+            <xs:element name="test" type="msgtype:FileType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+</xs:schema>

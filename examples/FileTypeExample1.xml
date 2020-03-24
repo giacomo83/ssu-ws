@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types:TestFile xmlns:msgtype="http://www.agid.gov.it/ssu/ws/message/types"
+ xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
+ xmlns:testtypes="http://www.agid.gov.it/ssu/ws/test/message/types"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.agid.gov.it/ssu/ws/test/message/types file:/C:/Users/giacomo.iacuaniello/Documents/GitHub/giacomo83/ssu-ws/examples/TestSchema.xsd">
+   
+    
+    <testtypes:test>
+        <msgtype:Structured>
+            <msgtype:Signed msgtype:rootElementType="xs:pippo" msgtype:signature="XAdES">
+                <msgtype:Embedded>
+                    <msgtype:Filename>Filename1</msgtype:Filename>
+                    <msgtype:MimeType>text/xml</msgtype:MimeType>
+                    <msgtype:File>ZGVmYXVsdA==</msgtype:File>
+                </msgtype:Embedded>
+            </msgtype:Signed>
+        </msgtype:Structured>
+    </testtypes:test>
+    
+    <testtypes:test>
+        <msgtype:Structured>
+            <msgtype:Signed msgtype:rootElementType="xs:pippo" msgtype:signature="XAdES">
+                <msgtype:Referenced>
+                    <msgtype:Filename>Filename2.txt</msgtype:Filename>
+                    <msgtype:MimeType>text/xml</msgtype:MimeType>
+                    <msgtype:AccessToken>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</msgtype:AccessToken>
+                    <msgtype:FileHash>
+                        <msgtype:SHA256>3031323334353637383930313233343536373839303132333435363738393032</msgtype:SHA256>
+                    </msgtype:FileHash>
+                    <msgtype:FileURL>http://repo.amministrazione.esempio.gob.it/d47799a6-6dbd-4114-9a7e-6d66e474f271</msgtype:FileURL>
+                </msgtype:Referenced>
+            </msgtype:Signed>
+        </msgtype:Structured>
+    </testtypes:test>
+    
+    
+    <testtypes:test>
+        <msgtype:Structured>
+            <msgtype:Unsigned>
+                <msgtype:XMLFile msgtype:rootElementType="xs:pippo">
+                    <msgtype:Embedded>
+                        <msgtype:Filename>Filename1.xml</msgtype:Filename>
+                        <msgtype:MimeType>text/xml</msgtype:MimeType>
+                        <msgtype:File>ZGVmYXVsdA==</msgtype:File>
+                    </msgtype:Embedded>
+                </msgtype:XMLFile>
+                <msgtype:UnstructuredFile msgtype:signature="None">
+                    <msgtype:Referenced>
+                        <msgtype:Filename>Filename2.pdf</msgtype:Filename>
+                        <msgtype:MimeType>application/pdf</msgtype:MimeType>
+                        <msgtype:AccessToken>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</msgtype:AccessToken>
+                        <msgtype:FileHash>
+                            <msgtype:SHA512>30313233343536373839303132333435363738393031323334353637383930313233343536373839303132333435363738393031323334353637383930313233</msgtype:SHA512>
+                        </msgtype:FileHash>
+                        <msgtype:FileURL>http://repo.amministrazione.esempio.gov.it/57926745-5777-44f7-897b-c929369499dd</msgtype:FileURL>
+                    </msgtype:Referenced>
+                </msgtype:UnstructuredFile>
+            </msgtype:Unsigned>
+        </msgtype:Structured>
+    </testtypes:test>
+    
+    
+    <testtypes:test>
+        <msgtype:Unstructured msgtype:signature="PAdES">
+            <msgtype:Referenced>
+                <msgtype:Filename>Filename3.pdf</msgtype:Filename>
+                <msgtype:MimeType>application/pdf</msgtype:MimeType>
+                <msgtype:AccessToken>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</msgtype:AccessToken>
+                <msgtype:FileHash>
+                    <msgtype:SHA256>3031323334353637383930313233343536373839303132333435363738393031</msgtype:SHA256>
+                </msgtype:FileHash>
+                <msgtype:FileURL>http://repo.amministrazione.esempio.gov.it/7c20eda8-930f-4c8e-b534-71a82ddf6a35</msgtype:FileURL>
+            </msgtype:Referenced>
+        </msgtype:Unstructured>
+    </testtypes:test>
+    
+    
+    <testtypes:test>
+        <msgtype:Unstructured msgtype:signature="CAdES">
+            <msgtype:Embedded>
+                <msgtype:Filename>FilenameImage1.tif</msgtype:Filename>
+                <msgtype:MimeType>image/tiff</msgtype:MimeType>
+                <msgtype:File>ZGVmYXVsdA==</msgtype:File>
+            </msgtype:Embedded>
+        </msgtype:Unstructured>
+    </testtypes:test>
+    
+    <testtypes:test>
+        <msgtype:Unstructured msgtype:signature="None">
+            <msgtype:Referenced>
+                <msgtype:Filename>Filename3.pdf</msgtype:Filename>
+                <msgtype:MimeType>application/pdf</msgtype:MimeType>
+                <msgtype:AccessToken>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</msgtype:AccessToken>
+                <msgtype:FileHash>
+                    <msgtype:SHA256>3031323334353637383930313233343536373839303132333435363738393031</msgtype:SHA256>
+                </msgtype:FileHash>
+                <msgtype:FileURL>http://repo.amministrazione.esempio.gov.it/7c20eda8-930f-4c8e-b534-71a82ddf6a35</msgtype:FileURL>
+            </msgtype:Referenced>
+        </msgtype:Unstructured>
+    </testtypes:test>
+    
+</types:TestFile>
