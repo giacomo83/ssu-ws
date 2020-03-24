@@ -79,7 +79,7 @@
     <testtypes:test>
         <msgtype:Unstructured msgtype:signature="CAdES">
             <msgtype:Embedded>
-                <msgtype:Filename>FilenameImage1.tif</msgtype:Filename>
+                <msgtype:Filename>FilenameImage1.tif.p7m</msgtype:Filename>
                 <msgtype:MimeType>image/tiff</msgtype:MimeType>
                 <msgtype:File>ZGVmYXVsdA==</msgtype:File>
             </msgtype:Embedded>
